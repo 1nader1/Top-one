@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP ONE - قمة الأولى</title>
+    <link rel="icon" type="image/png" href="resorces/TOP ONE L S.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="top.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+   
+</head>
+<body class="text-right">
+
+    <!-- Navigation -->
+    <body class="text-right">
+    <nav class="navy-bg text-white py-7 px-6 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex items-center justify-between flex-row-reverse">
+            
+            <div class="theme-toggle ml-4 md:ml-0" id="theme-toggle">
+                <i class="theme-icon fas fa-moon" id="theme-icon"></i>
+            </div>
+            
+            <div class="hidden md:flex space-x-6 space-x-reverse order-2">
+                <a href="#products" class="hover:gold-text transition">المنتجات</a>
+                <a href="#location" class="hover:gold-text transition">الموقع</a>
+                <a href="#contact" class="hover:gold-text transition">اتصل بنا</a>
+                <a href="#about" class="hover:gold-text transition">من نحن</a>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2">
+                <a href="#home" class="block">
+                    <img src="resorces/TOP ONE LOGO copy.png" alt="TOP ONE Logo" class="h-12">
+                </a>
+            </div>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-900 mt-2 py-2 px-4 rounded-lg">
+            <a href="#home" class="block py-2 hover:gold-text transition">الرئيسية</a>
+            <a href="#products" class="block py-2 hover:gold-text transition">المنتجات</a>
+            <a href="#location" class="block py-2 hover:gold-text transition">الموقع</a>
+            <a href="#contact" class="block py-2 hover:gold-text transition">اتصل بنا</a>
+            <a href="#about" class="block py-2 hover:gold-text transition">من نحن</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+     
+    <section id="home" class=" navy-bg text-white py-16 px-6 relative" style="min-height: 90vh;">
+        <div class="container mx-auto text-center fade-in">
+
+            <div class="video-container absolute inset-0 z-0">
+            <div class="video-background absolute inset-0 z-0">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                <source src="resorces/Topone Vid.webm" type="video/webm">
+                <source src="resorces/topone vid b.mp4" type="video/mp4">
+            </video>
+
+            <!-- Darknes layer-->
+            <div class="overlay absolute inset-0 bg-black/50"></div>
+            </div>
+            <div class="content relative z-10 h-full items-center justify-center text-center py-20 px-6 transition inline-block">
+                <img 
+                    src="resorces/TOP ONE LOGO copy.png" 
+                    alt="TOP ONE Logo" 
+                    class="mx-auto h-20 md:h-60 mb-6"  
+                >
+                <p class="text-3xl md:text-4xl mb-8 text-yellow-400 font-bold"> قمة الأولى </p>
+                <p class="text-xl mb-6">لأحدث صيحات الموضة بجودة عالية </p>
+                <a href="#products" class="gold-bg text-white px-6 py-3 rounded-full font-extrabold hover:bg-yellow-600 transition inline-block">
+                    تصفح المنتجات
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+
+    <section id="products" class="py-8 px-6 bg-gray-50 ">
+        <div class="slider">
+            <div class="slider-items">
+                <img src="resorces/Adidas_logo.png"
+                    alt="">
+                <img src="resorces/air-jordan.png"
+                    alt="">
+                <img src="resorces/Asics_Logo.svg.png"
+                    alt="">
+                <img src="resorces/Caterpillar-Logo.png"
+                    alt="">
+                <img src="resorces/Gucci-Logo.png"
+                    alt="">
+                <img src="resorces/lacoste.png"
+                    alt="">
+                <img src="resorces/Levis-Logo.png"
+                    alt="">
+                <img src="resorces/new-balance.png"
+                    alt="">
+            
+                <!-- duplicate -->
+                <img src="resorces/Adidas_logo.png"
+                    alt="">
+                <img src="resorces/air-jordan.png"
+                    alt="">
+                <img src="resorces/Asics_Logo.svg.png"
+                    alt="">
+                <img src="resorces/Caterpillar-Logo.png"
+                    alt="">
+                <img src="resorces/Gucci-Logo.png"
+                    alt="">
+                <img src="resorces/lacoste.png"
+                    alt="">
+                <img src="resorces/Levis-Logo.png"
+                    alt="">
+                <img src="resorces/new-balance.png"
+                    alt="">
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            
+            <h2 class="text-3xl text-blue-700 font-bold  mb-12 text-center section-title navy-text">منتجاتنا</h2>
+            
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="products-container">
+                
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="tshirt" data-id="1">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/j1.jpg" 
+                             alt="جينز ليفايس كحلي" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-1">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">جينز ليفايس كحلي</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300">جودة عالية واعتمادية</p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                <button class="color-btn active" 
+                                        data-color="black"
+                                        data-product-id="1"
+                                        data-image="products/j1.jpg"
+                                        style="background-color: #18154c">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="tshirt" data-id="1">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/j2.jpg" 
+                             alt="جينز ليفايس أزرق" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-2">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">جينز ليفايس أزرق</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300">جودة عالية واعتمادية</p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                <button class="color-btn active" 
+                                        data-color="black"
+                                        data-product-id="2"
+                                        data-image="products/j2.jpg"
+                                        style="background-color: #284ca0">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="tshirt" data-id="1">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/j3.jpg" 
+                             alt="جينز ليفايس كحلي" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-3">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">جينز ليفايس كحلي</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300">جودة عالية واعتمادية</p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                               
+                                <button class="color-btn active" 
+                                        data-color="black"
+                                        data-product-id="3"
+                                        data-image="products/j3.jpg"
+                                        style="background-color: #1e215b">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="tshirt" data-id="1">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/j4.jpg" 
+                             alt="جينز ليفايس أسود" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-4">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">جينز ليفايس أسود</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300">جودة عالية واعتمادية</p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                
+                                <button class="color-btn"
+                                        data-color="blue"
+                                        data-product-id="4"
+                                        data-image="products/j4.jpg"
+                                        style="background-color: #000000">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="tshirt" data-id="1">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/j5.jpg" 
+                             alt="جينز ليفايس أزرق فاتح" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-5">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">جينز ليفايس أزرق فاتح</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300">جودة عالية واعتمادية</p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                <button class="color-btn active" 
+                                        data-color="black"
+                                        data-product-id="5"
+                                        data-image="products/j5.jpg"
+                                        style="background-color: #60aff5">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="tshirt" data-id="1">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/L1 2.jpg" 
+                             alt="حزام جلد طبيعي " 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-6">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">حزام جلد طبيعي</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300">جودة عالية واعتمادية</p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                <button class="color-btn active" 
+                                        data-color="black"
+                                        data-product-id="6"
+                                        data-image="products/L1 2.jpg"
+                                        style="background-color: #5a3131">
+                                </button>
+                                <button class="color-btn"
+                                        data-color="white"
+                                        data-product-id="6"
+                                        data-image="products/L1.jpg"
+                                        style="background-color: #5a3131; ">
+                                </button>
+                                <button class="color-btn"
+                                        data-color="blue"
+                                        data-product-id="6"
+                                        data-image="products/L1 3.jpg"
+                                        style="background-color: #5a3131">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="tshirt" data-id="1">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/p11.jpg" 
+                             alt="تيشيرت رجالي أسود" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-7">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">حذاء رسمي فاخر</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300">جودة عالية واعتمادية</p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                <button class="color-btn active" 
+                                        data-color="black"
+                                        data-product-id="7"
+                                        data-image="products/p11.jpg"
+                                        style="background-color: #4b3333">
+                                </button>
+                                <button class="color-btn"
+                                        data-color="white"
+                                        data-product-id="7"
+                                        data-image="products/p12.jpg"
+                                        style="background-color: #a67837;">
+                                </button>
+                                <button class="color-btn"
+                                        data-color="blue"
+                                        data-product-id="7"
+                                        data-image="products/p13.jpg"
+                                        style="background-color: #000000">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="shirt" data-id="2">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/p21.jpg" 
+                             alt="حذاء رياضي" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-8">
+                        <!-- <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">غير متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white"> حذاء رياضي ASICS</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300">راحة وجودة عالية</p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                <button class="color-btn active"
+                                        data-color="white"
+                                        data-product-id="8"
+                                        data-image="products/p21.jpg"
+                                        style="background-color: #fff;">
+                                </button>
+                                <button class="color-btn"
+                                        data-color="blue"
+                                        data-product-id="8"
+                                        data-image="products/p22.jpg"
+                                        style="background-color: #000000">
+                                </button>
+                                <button class="color-btn"
+                                        data-color="gray"
+                                        data-product-id="8"
+                                        data-image="products/p23.jpg"
+                                        style="background-color: #6f78a1">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 9 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="jeans" data-id="3">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/p32.jpg" 
+                             alt="جينز أزرق غامق" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-9">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">حذاء رياضي Adidas</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300">جودة عالية وتصميم مميز</p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                <button class="color-btn"
+                                data-color="blue"
+                                data-product-id="9"
+                                data-image="products/p32.jpg"
+                                style="background-color: #000000">
+                            </button>
+                            <button class="color-btn active"
+                                    data-color="darkblue"
+                                    data-product-id="9"
+                                    data-image="products/p31.jpg"
+                                    style="background-color: #ffffff">
+                            </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="jeans" data-id="3">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/p33.jpg" 
+                             alt="جينز أزرق غامق" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-10">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">حذاء رياضي Adidas</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300">جودة عالية وتصميم مميز</p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                
+                                <button class="color-btn"
+                                        data-color="black"
+                                        data-product-id="10"
+                                        data-image="products/p33.jpg"
+                                        style="background-color: #ffffff">
+                                </button>
+                                <button class="color-btn"
+                                        data-color="black"
+                                        data-product-id="10"
+                                        data-image="products/p34.jpg"
+                                        style="background-color: #000000">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="jeans" data-id="3">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/p36.jpg" 
+                             alt="جينز أزرق غامق" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-11">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">حذاء رياضي Adidas</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300">جودة عالية وتصميم مميز</p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                
+                                <button class="color-btn"
+                                        data-color="black" 
+                                        data-product-id="11"
+                                        data-image="products/p36.jpg"
+                                        style="background-color: #000000">
+                                </button>
+                                <button class="color-btn"
+                                        data-color="black"
+                                        data-product-id="11"
+                                        data-image="products/p35.jpg"
+                                        style="background-color: #ffffff">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="jacket" data-id="4">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/L8 1.jpg" 
+                             alt="صندل رياضي" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-12">
+                        <!-- <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">كمية محدودة</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">صندل Water Fish</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300"></p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="12"
+                                        data-image="products/L8 1.jpg"
+                                        style="background-color: #3a597d">
+                                </button>
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="12"
+                                        data-image="products/L8 2.jpg"
+                                        style="background-color: #000000">
+                                </button>
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="12"
+                                        data-image="products/L8 3.jpg"
+                                        style="background-color: #909090">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="jacket" data-id="4">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/L7 1.jpg" 
+                             alt="سلبر" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-13">
+                        <!-- <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">كمية محدودة</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">سلبر</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300"></p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="13"
+                                        data-image="products/L7 1.jpg"
+                                        style="background-color: #fcfcfc">
+                                </button>
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="13"
+                                        data-image="products/L7 2.jpg"
+                                        style="background-color: #000000">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="jacket" data-id="4">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/L9.jpg" 
+                             alt="سلبر GYM" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-14">
+                        <!-- <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">كمية محدودة</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">سلبر GYM</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300"></p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="14"
+                                        data-image="products/L9.jpg"
+                                        style="background-color: #7a7a7a">
+                                </button>
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="14"
+                                        data-image="products/L9 3.jpg"
+                                        style="background-color: #ffffff">
+                                </button>
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="14"
+                                        data-image="products/L9 2.jpg"
+                                        style="background-color: #000000">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 15 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="jacket" data-id="4">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/p4.jpg" 
+                             alt="كاب" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-15">
+                        <!-- <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">كمية محدودة</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">كاب</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300"></p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="15"
+                                        data-image="products/p4.jpg"
+                                        style="background-color: #ffffff">
+                                </button>
+                                
+
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="15"
+                                        data-image="products/p5.jpg"
+                                        style="background-color: #009605">
+                                </button>
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="15"
+                                        data-image="products/p6.jpg"
+                                        style="background-color: #e7d800">
+                                </button>
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="15"
+                                        data-image="products/p8.jpg"
+                                        style="background-color: #ff9500">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 16 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="sport" data-id="5">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/p10 1.jpg" 
+                             alt="شراب رياضي" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-16">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">شراب رياضي</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300"></p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                
+                                <button class="color-btn"
+                                        data-color="blue"
+                                        data-product-id="16"
+                                        data-image="Products/p10 1.jpg"
+                                        style="background-color: #ffffff">
+                                </button>
+                                <button class="color-btn"
+                                        data-color="blue"
+                                        data-product-id="16"
+                                        data-image="Products/p10 5.jpg"
+                                        style="background-color: #000000">
+                                </button>
+                                <button class="color-btn"
+                                        data-color="blue"
+                                        data-product-id="16"
+                                        data-image="Products/p10 7.jpg"
+                                        style="background-color: #ffffff">
+                                </button>
+                                <button class="color-btn"
+                                        data-color="blue"
+                                        data-product-id="16"
+                                        data-image="Products/p10 2.jpg"
+                                        style="background-color: #000000">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 17 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="sport" data-id="5">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/p14 2.jpg" 
+                             alt="شراب رياضي" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-17">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">شراب رياضي</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300"></p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="17"
+                                        data-image="products/p14 2.jpg"
+                                        style="background-color: #000000">
+                                </button>
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="17"
+                                        data-image="products/p14 3.jpg"
+                                        style="background-color: #ffffff">
+                                </button>
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="17"
+                                        data-image="products/p14 4.jpg"
+                                        style="background-color: #000000">
+                                </button>
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="17"
+                                        data-image="products/p14 1.jpg"
+                                        style="background-color: #ffffff">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 18 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="sport" data-id="5">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/p15 1.jpg" 
+                             alt="شراب رياضي" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-18">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">شراب رياضي</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300"></p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="18"
+                                        data-image="products/p15 1.jpg"
+                                        style="background-color: #ffffff">
+                                </button>
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="18"
+                                        data-image="products/p15 2.jpg"
+                                        style="background-color: #000000">
+                                </button>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 19 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="sport" data-id="5">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/p16.jpg" 
+                             alt="شراب رياضي" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-19">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">شراب رياضي</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300"></p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                
+                                
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="19"
+                                        data-image="products/p16.jpg"
+                                        style="background-color: #ffffff">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 20 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 dark:bg-blue-800" data-category="sport" data-id="5">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="products/p17.jpg" 
+                             alt="شراب رياضي" 
+                             class="w-full h-full object-cover product-main-image"
+                             id="product-image-20">
+                        <!-- <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">متوفر</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg navy-text mb-2 dark:text-white">شراب رياضي</h3>
+                        <p class="text-gray-600 mb-3 dark:text-gray-300"></p>
+                        <div class="mb-3">
+                            <span class="font-medium navy-text dark:text-white">الألوان المتاحة:</span>
+                            <div class="color-options mt-2">
+                                
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="20"
+                                        data-image="products/p17.jpg"
+                                        style="background-color: #ffffff">
+                                </button>
+                                <button class="color-btn active"
+                                        data-color="black"
+                                        data-product-id="20"
+                                        data-image="products/p17 2.jpg"
+                                        style="background-color: #ffffff">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-16 px-6 bg-white dark:bg-blue-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center section-title navy-text dark:text-white">موقعنا</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md dark:bg-blue-700">
+                        <h3 class="font-bold text-xl navy-text mb-4 dark:text-white">عنوان المتجر</h3>
+                        <p class="mb-4 dark:text-gray-300"><i class="fas fa-map-marker-alt gold-text mr-2"></i> الشارع العام، تبوك، المملكة العربية السعودية</p>
+                        
+                        <h3 class="font-bold text-xl navy-text mb-4 mt-6 dark:text-white">أوقات العمل</h3>
+                        <p class="mb-2 dark:text-gray-300"><span class="font-medium">السبت - الخميس:</span> 9:00 صباحاً - 1:00 صباحاً</p>
+                        <p class="mb-2 dark:text-gray-300"><span class="font-medium">الجمعة:</span> 4:00 مساءً - 1:00 صباحاً</p>
+                        
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <!-- Google Maps Embed -->
+                    <div class="h-96 w-full bg-gray-200 rounded-lg overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.2020079499225!2d36.55853737494769!3d28.382965995371006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15a9ad4b9945e80f%3A0x18c233db6192810a!2z2YXYpNiz2LPYqSDZgtmF2Kkg2KfZhNij2YjZhNmJINmE2YTZhdmE2KfYqNizINin2YTYrNin2YfYstipINiq2YjYqCDZiNmGIFRPUCBPTkU!5e0!3m2!1sen!2sjo!4v1749869456480!5m2!1sen!2sjo" width="720" height="390" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                class="rounded-lg">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 bg-gray-50 dark:bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center section-title navy-text dark:text-blue-800">اتصل بنا</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-white p-6 rounded-lg shadow-md dark:bg-blue-700">
+                        <h3 class="font-bold text-xl navy-text mb-6 dark:text-white">تواصل مع فريق TOP ONE</h3>
+                        
+                        <div class="mt-8">
+                            <a href="tel:+966112345678" class="gold-bg navy-text px-6 py-3 rounded-full font-bold hover:bg-yellow-600 transition inline-block dark:text-gray-900">
+                                <i class="fas fa-phone mr-2"></i> اتصل بنا: +966 502551543
+                            </a>
+                        </div>
+                        
+                        <!-- <div class="mt-8">
+                            <a href="mailto:kimatalolah@gmail.com" class="gold-bg navy-text px-6 py-3 rounded-full font-bold hover:bg-yellow-600 transition inline-block dark:text-gray-900">
+                                <i class="fas fa-envelope mr-2"></i> الايميل:kimatalolah@gmail.com
+                            </a>
+                        </div> -->
+                        
+                        <div class="mt-8">
+                            <a href="https://wa.me/966502551543" 
+                               class="gold-bg navy-text px-6 py-3 rounded-full font-bold hover:bg-yellow-600 transition inline-block dark:text-gray-900">
+                                <i class="fab fa-whatsapp mr-2"></i> ارسل لنا عبر الواتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 px-6 bg-white dark:bg-blue-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center section-title navy-text dark:text-white">من نحن</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md mb-8 dark:bg-blue-700">
+                    <h3 class="font-bold text-2xl navy-text mb-4 dark:text-white">رؤيتنا</h3>
+                    <p class="text-gray-700 leading-relaxed dark:text-gray-300">
+                     نطمح في TOP ONE أن نكون الوجهة الأولى لعشاق الموضة في المملكة العربية السعودية، من خلال تقديم تشكيلة مميزة من الملابس التي تجمع بين الأناقة والجودة العالية.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md mb-8 dark:bg-blue-700">
+                    <h3 class="font-bold text-2xl navy-text mb-4 dark:text-white">تاريخنا</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4 dark:text-gray-300">
+                        تأسس متجر TOP ONE قبل 22 عام في 2003 بمدينة تبوك، بدأنا بمتجر صغير في الشارع العام، ومع ثقة عملائنا الكرام وتفاعلهم الإيجابي مع منتجاتنا، توسعنا لنوفر لكم مجموعة متميزة تليق بكم.
+                    </p>
+    
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md dark:bg-blue-700">
+                    <h3 class="font-bold text-2xl navy-text mb-4 dark:text-white">لماذا TOP ONE؟</h3>
+                    <ul class="list-disc pr-5 text-gray-700 space-y-2 dark:text-gray-300">
+                        <li>أكثر من 22 سنة من الخبرة في عالم الأزياء</li>
+                        <li>شراكات مع أشهر الماركات العالمية والمحلية</li>
+                        <li>جودة عالية في التصنيع والمواد المستخدمة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="navy-bg text-white py-8 px-6 dark:bg-blue-900">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class=" topone-f text-2xl font-bold mb-2">
+                        <span class="logo-top">TOP</span>
+                        <span class="logo-one">ONE</span>
+                    </h2>
+                    <p class="font-bold" >أحدث صيحات الموضة بجودة عالية</p>
+                </div>
+                
+                <div class="flex space-x-6 space-x-reverse mb-6 md:mb-0">
+
+                    <a href="https://wa.me/966502551543" class="text-white hover:gold-text transition">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+                
+                <div class="text-center md:text-right font-bold text-yellow-400">
+                    <p> <p class="text-white" >جميع الحقوق محفوظة </p> قمة الأولى &copy; 2003 TOP ONE</p>
+                    <p class="text-center md:text-right text-white">طور هذا الموقع من  <a href="" class="weblixity">WEBLIXITY</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   <script src="top.js"></script>
+</body>
+</html>

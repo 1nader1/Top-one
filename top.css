@@ -290,7 +290,7 @@
     width: 100%;
     overflow: hidden;
     background: rgb(255, 252, 92);
-    border-radius: 16px;
+    border-radius: 15px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.4px);
     -webkit-backdrop-filter: blur(7.4px);
@@ -304,7 +304,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
     animation: scrolling 20s linear infinite;
 
 }
@@ -321,7 +320,6 @@
 }
 
 .slider-items img {
-    width: 8rem;
+    width: 17rem;
     margin: 20px;
-
 }

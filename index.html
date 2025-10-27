@@ -57,9 +57,12 @@
 
             <div class="video-container absolute inset-0 z-0">
             <div class="video-background absolute inset-0 z-0">
-            <video autoplay muted loop playsinline class="w-full h-full object-cover">
-                <source src="resorces/Topone Vid.webm" type="video/webm">
-                <!-- <source src="resorces/topone vid b.mp4" type="video/mp4"> -->
+            <!-- poster shows while video is not loaded; preload="none" prevents immediate download -->
+            <video id="hero-video" muted loop playsinline class="w-full h-full object-cover" poster="resorces/Topone-poster.jpg" preload="none">
+                <!-- use data-src so the browser doesn't fetch the file until JS assigns the real src -->
+                <source data-src="resorces/Topone Vid.webm" type="video/webm">
+                <!-- fallback mp4 (commented out source previously) kept as data-src for lazy load -->
+                <source data-src="resorces/topone vid b.mp4" type="video/mp4">
             </video>
 
             <!-- Darknes layer-->

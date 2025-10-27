@@ -108,14 +108,49 @@
             localStorage.setItem('darkMode', 'disabled');
         }
 
-        // تشغيل الفيديو الخلفية
+        // تشغيل الفيديو الخلفية (lazy-load to improve initial load)
         document.addEventListener('DOMContentLoaded', () => {
-            const video = document.querySelector('.video-background video');
-            
-            // إعادة تشغيل الفيديو عند تغيير الصفحة (حل لمشكلة Safari)
+            // Prefer the explicit ID if present
+            const video = document.getElementById('hero-video') || document.querySelector('.video-background video');
+
+            if (!video) return;
+
+            // When sources are stored in data-src, assign them only when the video is near viewport
+            const lazyLoadVideo = () => {
+                const sources = video.querySelectorAll('source[data-src]');
+                sources.forEach(s => {
+                    const dataSrc = s.getAttribute('data-src');
+                    if (dataSrc && !s.src) {
+                        // encode spaces and other characters
+                        s.src = encodeURI(dataSrc);
+                    }
+                });
+                // load new sources and try to play (muted autoplay should be allowed)
+                video.load();
+                video.play().catch(e => console.log('Auto-play prevented or failed:', e));
+            };
+
+            if ('IntersectionObserver' in window) {
+                const io = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            lazyLoadVideo();
+                            obs.disconnect();
+                        }
+                    });
+                }, {threshold: 0.15});
+
+                // observe the video element or its container for visibility
+                io.observe(video.closest('.video-container') || video);
+            } else {
+                // Fallback: load shortly after DOM ready
+                setTimeout(lazyLoadVideo, 300);
+            }
+
+            // Ensure video resumes when tab becomes active (Safari fix)
             document.addEventListener('visibilitychange', () => {
                 if (!document.hidden) {
-                    video.play().catch(e => console.log("Auto-play prevented"));
+                    video.play().catch(e => console.log('Auto-play prevented:', e));
                 }
             });
         });

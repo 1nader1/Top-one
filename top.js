@@ -53,27 +53,75 @@
             });
         });
 
-        // تغيير الصورة عند النقر على زر اللون
-        document.addEventListener('click', function(e) {
-            if (e.target.classList.contains('color-btn')) {
-                const productId = e.target.getAttribute('data-product-id');
-                const newImage = e.target.getAttribute('data-image');
-                const productImage = document.getElementById(`product-image-${productId}`);
-                
-                // تأثير التغيير السلس
-                productImage.classList.add('fade-out');
-                setTimeout(() => {
-                    productImage.src = newImage;
-                    productImage.classList.remove('fade-out');
-                }, 300);
-                
-                // تحديث الزر النشط
-                document.querySelectorAll(`.color-btn[data-product-id="${productId}"]`).forEach(btn => {
-                    btn.classList.remove('active');
+        // تغيير الصورة عند النقر على زر اللون — preload then swap smoothly
+        (function() {
+            const imgCache = new Map(); // src -> Promise(Image)
+
+            function preloadImage(src) {
+                if (!src) return Promise.reject('no-src');
+                const key = src;
+                if (imgCache.has(key)) return imgCache.get(key);
+                const p = new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.onload = () => resolve(img);
+                    img.onerror = (e) => reject(e);
+                    img.src = encodeURI(src);
                 });
-                e.target.classList.add('active');
+                imgCache.set(key, p);
+                return p;
             }
-        });
+
+            document.addEventListener('click', function(e) {
+                const btn = e.target.closest && e.target.closest('.color-btn') || (e.target.classList && e.target.classList.contains('color-btn') ? e.target : null);
+                if (!btn) return;
+
+                const productId = btn.getAttribute('data-product-id');
+                const newImage = btn.getAttribute('data-image');
+                const productImage = document.getElementById(`product-image-${productId}`);
+                if (!productImage) return;
+
+                // Update active state immediately
+                document.querySelectorAll(`.color-btn[data-product-id="${productId}"]`).forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Preload then swap to avoid flicker
+                preloadImage(newImage).then(img => {
+                    productImage.classList.add('fade-out');
+                    // small delay to allow CSS transition
+                    setTimeout(() => {
+                        productImage.src = img.src;
+                        productImage.classList.remove('fade-out');
+                    }, 120);
+                }).catch(err => {
+                    // If preload fails, still attempt a direct swap
+                    console.warn('Image preload failed:', newImage, err);
+                    productImage.src = newImage;
+                });
+            });
+
+            // Preload color images for a product when that product card is visible
+            if ('IntersectionObserver' in window) {
+                const cardObserver = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const card = entry.target;
+                            card.querySelectorAll('.color-btn[data-image]').forEach(b => {
+                                const src = b.getAttribute('data-image');
+                                preloadImage(src).catch(()=>{});
+                            });
+                            obs.unobserve(card);
+                        }
+                    });
+                }, {threshold: 0.15});
+
+                document.querySelectorAll('.product-card').forEach(card => cardObserver.observe(card));
+            } else {
+                // Fallback: preload all color images shortly after load
+                setTimeout(() => {
+                    document.querySelectorAll('.color-btn[data-image]').forEach(b => preloadImage(b.getAttribute('data-image')).catch(()=>{}));
+                }, 1500);
+            }
+        })();
 
         // Dark mode toggle
         const themeToggle = document.getElementById('theme-toggle');
@@ -155,23 +203,6 @@
             });
         });
 
-        // This remains the same in your top.js file
-document.querySelectorAll('.color-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        const productId = this.getAttribute('data-product-id');
-        const newImage = this.getAttribute('data-image');
-        
-        // Remove active class from all buttons for this product
-        document.querySelectorAll(`.color-btn[data-product-id="${productId}"]`).forEach(b => {
-            b.classList.remove('active');
-        });
-        
-        // Add active class to clicked button
-        this.classList.add('active');
-        
-        // Update the product image
-        document.getElementById(`product-image-${productId}`).src = newImage;
-    });
-});
+        // Duplicate click handlers removed — image swapping and preloading handled above.
 
  

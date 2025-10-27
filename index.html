@@ -760,16 +760,22 @@
                 </div>
                 
                 <div class="md:w-1/2">
-                    <!-- Google Maps Embed -->
-                    <div class="h-96 w-full bg-gray-200 rounded-lg overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.2020079499225!2d36.55853737494769!3d28.382965995371006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15a9ad4b9945e80f%3A0x18c233db6192810a!2z2YXYpNiz2LPYqSDZgtmF2Kkg2KfZhNij2YjZhNmJINmE2YTZhdmE2KfYqNizINin2YTYrNin2YfYstipINiq2YjYqCDZiNmGIFRPUCBPTkU!5e0!3m2!1sen!2sjo!4v1749869456480!5m2!1sen!2sjo" width="720" height="390" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                                width="100%" 
-                                height="100%" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy"
-                                class="rounded-lg">
-                        </iframe>
+                    <!-- Responsive Google Maps Embed -->
+                    <div class="map-wrapper bg-gray-200 rounded-lg overflow-hidden">
+                        <div class="map-container">
+                            <iframe id="store-map"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.2020079499225!2d36.55853737494769!3d28.382965995371006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15a9ad4b9945e80f%3A0x18c233db6192810a!2z2YXYpNiz2LPYqSDZgtmF2Kkg2KfZhNij2YjZhNmJINmE2YTZhdmE2KfYqNizINin2YTYrNin2YfYstipINiq2YjYqCDZiNmGIFRPUCBPTkU!5e0!3m2!1sen!2sjo!4v1749869456480!5m2!1sen!2sjo"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    aria-label="موقع المتجر على خرائط جوجل">
+                            </iframe>
+                        </div>
+
+                        <!-- Open in Google Maps (opens in a new tab) -->
+                        <div class="map-actions p-3 flex justify-end">
+                            <a class="open-maps-btn" href="https://www.google.com/maps/search/?api=1&query=28.382966,36.558537" target="_blank" rel="noopener noreferrer">افتح في Google Maps</a>
+                        </div>
                     </div>
                 </div>
             </div>

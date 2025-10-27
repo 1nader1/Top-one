@@ -123,6 +123,53 @@
             }
         })();
 
+        // Ensure only the color button that matches the currently displayed image is active on page load
+        function normalizePath(s) {
+            if (!s) return '';
+            try {
+                return decodeURI(s).replace(/\\\\/g, '/').trim();
+            } catch (e) {
+                return String(s).replace(/\\\\/g, '/').trim();
+            }
+        }
+
+        function initActiveColorButtons() {
+            document.querySelectorAll('.product-card').forEach(card => {
+                const img = card.querySelector('.product-main-image');
+                if (!img) return;
+                const currentSrc = img.getAttribute('src') || img.src || '';
+                const normCurrent = normalizePath(currentSrc);
+
+                let matched = false;
+                const buttons = card.querySelectorAll('.color-btn[data-image]');
+                buttons.forEach((btn, idx) => {
+                    const dataImage = btn.getAttribute('data-image') || '';
+                    const normData = normalizePath(dataImage);
+
+                    // Remove any existing active class; we'll set the correct one below
+                    btn.classList.remove('active');
+
+                    // If the current image path equals or endsWith the data-image path, mark it
+                    if (!matched && (normCurrent === normData || normCurrent.endsWith(normData))) {
+                        btn.classList.add('active');
+                        matched = true;
+                    }
+                });
+
+                // If no matching button found, set the first button as active to avoid none being active
+                if (!matched && buttons.length > 0) {
+                    buttons[0].classList.add('active');
+                }
+            });
+        }
+
+        // Run on DOMContentLoaded so initial markup is settled
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initActiveColorButtons);
+        } else {
+            initActiveColorButtons();
+        }
+
         // Dark mode toggle
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');

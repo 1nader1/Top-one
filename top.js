@@ -180,30 +180,35 @@
             (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             enableDarkMode();
         }
-        
+
         themeToggle.addEventListener('click', () => {
-            if (body.classList.contains('dark-mode')) {
+            // prefer the html 'dark' class (Tailwind) as the authoritative source
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
                 disableDarkMode();
             } else {
                 enableDarkMode();
             }
         });
-        
+
         function enableDarkMode() {
+            // Add Tailwind-compatible 'dark' to <html> and keep legacy 'dark-mode' on <body>
+            document.documentElement.classList.add('dark');
             body.classList.add('dark-mode');
             themeIcon.classList.remove('fa-moon');
             themeIcon.classList.add('fa-sun');
             localStorage.setItem('darkMode', 'enabled');
         }
-        
+
         function disableDarkMode() {
+            document.documentElement.classList.remove('dark');
             body.classList.remove('dark-mode');
             themeIcon.classList.remove('fa-sun');
             themeIcon.classList.add('fa-moon');
             localStorage.setItem('darkMode', 'disabled');
         }
 
-        // تشغيل الفيديو الخلفية (lazy-load to improve initial load)
+
         document.addEventListener('DOMContentLoaded', () => {
             // Prefer the explicit ID if present
             const video = document.getElementById('hero-video') || document.querySelector('.video-background video');

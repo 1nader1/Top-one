@@ -1,39 +1,10 @@
- body {
+body {
             font-family: 'Tajawal', sans-serif;
             background-color: #f8f9fa;
             transition: background-color 0.3s, color 0.3s;
         }
         
-        body.dark-mode {
-            background-color: #1a1a1a;
-            color: #e5e7eb;
-        }
-        
-        .dark-mode .navy-bg {
-            background-color: #0f172a;
-        }
-        
-        .dark-mode .bg-white {
-            background-color: #1e293b;
-            color: #e5e7eb;
-        }
-        
-        .dark-mode .bg-gray-50 {
-            background-color: #1a1a1a;
-        }
-        
-        .dark-mode .text-gray-600, 
-        .dark-mode .text-gray-700 {
-            color: #d1d5db;
-        }
-        
-        .dark-mode .bg-gray-100 {
-            background-color: #334155;
-        }
-        
-        .dark-mode .navy-text {
-            color: #e5e7eb;
-        }
+        /* DELETED: All .dark-mode rules */
         
         .navy-bg {
             background-color: #1d3585;
@@ -48,16 +19,12 @@
         }
         
         .navy-text {
-            color: #f9f9f9;
+            color: #1d3585; /* This is the main title color */
         }
         
         .product-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .dark-mode .product-card:hover {
-            box-shadow: 0 10px 20px rgba(255,255,255,0.1);
         }
         
         .fade-in {
@@ -116,39 +83,8 @@
             color: #ffd700;
         }
         
-        .theme-toggle {
-            position: fixed;
-            z-index: 100;
-            background-color: transparent;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 15%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
+        /* DELETED: Theme-toggle styles */
 
-        @media screen and (max-width: 768px) {
-            .theme-toggle {
-                position: fixed;
-                top: 27px;
-                right: 10px;
-                z-index: 1000;
-            }
-            
-        }
-        
-        .theme-toggle:hover {
-            transform: scale(1.1);
-        }
-        
-        .dark-mode .theme-toggle {
-            background-color: transparent;
-            color: #ffffff;
-        }
         #home {
             display: flex;
             align-items: center;
@@ -251,14 +187,12 @@
                 flex-wrap: wrap;
                 justify-self: center;
             }
-            
         }
 
          @media screen and (max-width: 426px) {
             .content {
                 margin-top: 5rem;
             }
-            
         }
 
         .weblixity {
@@ -267,22 +201,9 @@
             font-weight: bold;
         }
 
-        @media screen and (width: 768px) {
-            .theme-toggle {
-                position: fixed;
-                right: 45rem;
-                z-index: 1000;
-            }
-            
-            
-        }
-
-
-
-
+        /* DELETED: Media query for theme toggle */
 
 .slider {
-   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -333,7 +254,6 @@
 .map-container {
     position: relative;
     width: 100%;
-    /* 16:9 ratio by default; adjust if you prefer taller map */
     padding-bottom: 56.25%;
     height: 0;
 }

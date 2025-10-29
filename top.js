@@ -1,4 +1,4 @@
-  // Mobile menu toggle
+// Mobile menu toggle
         document.getElementById('menu-btn').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
@@ -170,45 +170,9 @@
             initActiveColorButtons();
         }
 
-        // Dark mode toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const body = document.body;
-        
-        // Check for saved user preference or use system preference
-        if (localStorage.getItem('darkMode') === 'enabled' || 
-            (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            enableDarkMode();
-        }
+        // DELETED: Dark mode toggle logic
 
-        themeToggle.addEventListener('click', () => {
-            // prefer the html 'dark' class (Tailwind) as the authoritative source
-            const html = document.documentElement;
-            if (html.classList.contains('dark')) {
-                disableDarkMode();
-            } else {
-                enableDarkMode();
-            }
-        });
-
-        function enableDarkMode() {
-            // Add Tailwind-compatible 'dark' to <html> and keep legacy 'dark-mode' on <body>
-            document.documentElement.classList.add('dark');
-            body.classList.add('dark-mode');
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-            localStorage.setItem('darkMode', 'enabled');
-        }
-
-        function disableDarkMode() {
-            document.documentElement.classList.remove('dark');
-            body.classList.remove('dark-mode');
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-            localStorage.setItem('darkMode', 'disabled');
-        }
-
-
+        // تشغيل الفيديو الخلفية (lazy-load to improve initial load)
         document.addEventListener('DOMContentLoaded', () => {
             // Prefer the explicit ID if present
             const video = document.getElementById('hero-video') || document.querySelector('.video-background video');
@@ -254,7 +218,3 @@
                 }
             });
         });
-
-        // Duplicate click handlers removed — image swapping and preloading handled above.
-
- 

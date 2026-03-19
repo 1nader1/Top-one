@@ -1,4 +1,3 @@
-// Mobile menu toggle
         document.getElementById('menu-btn').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
@@ -10,13 +9,12 @@
 
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // Remove active class from all buttons
+
                 filterButtons.forEach(btn => {
                     btn.classList.remove('gold-bg', 'navy-text');
                     btn.classList.add('bg-gray-200');
                 });
                 
-                // Add active class to clicked button
                 button.classList.remove('bg-gray-200');
                 button.classList.add('gold-bg', 'navy-text');
                 
@@ -32,7 +30,6 @@
             });
         });
 
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -45,7 +42,7 @@
                     behavior: 'smooth'
                 });
                 
-                // Close mobile menu if open
+
                 const mobileMenu = document.getElementById('mobile-menu');
                 if (!mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
@@ -53,9 +50,8 @@
             });
         });
 
-        // تغيير الصورة عند النقر على زر اللون — preload then swap smoothly
         (function() {
-            const imgCache = new Map(); // src -> Promise(Image)
+            const imgCache = new Map(); 
 
             function preloadImage(src) {
                 if (!src) return Promise.reject('no-src');
@@ -80,26 +76,24 @@
                 const productImage = document.getElementById(`product-image-${productId}`);
                 if (!productImage) return;
 
-                // Update active state immediately
+
                 document.querySelectorAll(`.color-btn[data-product-id="${productId}"]`).forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
-                // Preload then swap to avoid flicker
+
                 preloadImage(newImage).then(img => {
                     productImage.classList.add('fade-out');
-                    // small delay to allow CSS transition
+
                     setTimeout(() => {
                         productImage.src = img.src;
                         productImage.classList.remove('fade-out');
                     }, 120);
                 }).catch(err => {
-                    // If preload fails, still attempt a direct swap
                     console.warn('Image preload failed:', newImage, err);
                     productImage.src = newImage;
                 });
             });
 
-            // Preload color images for a product when that product card is visible
             if ('IntersectionObserver' in window) {
                 const cardObserver = new IntersectionObserver((entries, obs) => {
                     entries.forEach(entry => {
@@ -116,14 +110,13 @@
 
                 document.querySelectorAll('.product-card').forEach(card => cardObserver.observe(card));
             } else {
-                // Fallback: preload all color images shortly after load
+
                 setTimeout(() => {
                     document.querySelectorAll('.color-btn[data-image]').forEach(b => preloadImage(b.getAttribute('data-image')).catch(()=>{}));
                 }, 1500);
             }
         })();
 
-        // Ensure only the color button that matches the currently displayed image is active on page load
         function normalizePath(s) {
             if (!s) return '';
             try {
@@ -146,50 +139,43 @@
                     const dataImage = btn.getAttribute('data-image') || '';
                     const normData = normalizePath(dataImage);
 
-                    // Remove any existing active class; we'll set the correct one below
                     btn.classList.remove('active');
 
-                    // If the current image path equals or endsWith the data-image path, mark it
                     if (!matched && (normCurrent === normData || normCurrent.endsWith(normData))) {
                         btn.classList.add('active');
                         matched = true;
                     }
                 });
 
-                // If no matching button found, set the first button as active to avoid none being active
+
                 if (!matched && buttons.length > 0) {
                     buttons[0].classList.add('active');
                 }
             });
         }
 
-        // Run on DOMContentLoaded so initial markup is settled
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', initActiveColorButtons);
         } else {
             initActiveColorButtons();
         }
 
-        // DELETED: Dark mode toggle logic
-
-        // تشغيل الفيديو الخلفية (lazy-load to improve initial load)
         document.addEventListener('DOMContentLoaded', () => {
-            // Prefer the explicit ID if present
             const video = document.getElementById('hero-video') || document.querySelector('.video-background video');
 
             if (!video) return;
 
-            // When sources are stored in data-src, assign them only when the video is near viewport
+
             const lazyLoadVideo = () => {
                 const sources = video.querySelectorAll('source[data-src]');
                 sources.forEach(s => {
                     const dataSrc = s.getAttribute('data-src');
                     if (dataSrc && !s.src) {
-                        // encode spaces and other characters
+
                         s.src = encodeURI(dataSrc);
                     }
                 });
-                // load new sources and try to play (muted autoplay should be allowed)
+
                 video.load();
                 video.play().catch(e => console.log('Auto-play prevented or failed:', e));
             };
@@ -204,14 +190,11 @@
                     });
                 }, {threshold: 0.15});
 
-                // observe the video element or its container for visibility
                 io.observe(video.closest('.video-container') || video);
             } else {
-                // Fallback: load shortly after DOM ready
                 setTimeout(lazyLoadVideo, 300);
             }
 
-            // Ensure video resumes when tab becomes active (Safari fix)
             document.addEventListener('visibilitychange', () => {
                 if (!document.hidden) {
                     video.play().catch(e => console.log('Auto-play prevented:', e));

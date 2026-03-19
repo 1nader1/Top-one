@@ -3,9 +3,7 @@ body {
             background-color: #f8f9fa;
             transition: background-color 0.3s, color 0.3s;
         }
-        
-        /* DELETED: All .dark-mode rules */
-        
+                
         .navy-bg {
             background-color: #1d3585;
         }
@@ -19,7 +17,7 @@ body {
         }
         
         .navy-text {
-            color: #1d3585; /* This is the main title color */
+            color: #1d3585; 
         }
         
         .product-card:hover {
@@ -83,8 +81,6 @@ body {
             color: #ffd700;
         }
         
-        /* DELETED: Theme-toggle styles */
-
         #home {
             display: flex;
             align-items: center;

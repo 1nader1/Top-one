@@ -1,11 +1,7 @@
-// تجهيز الصور قبل الرفع (يشتغل بالمتصفح، مجاني بالكامل).
-// - يصحّح اتجاه الصورة (EXIF)  - يصغّر ولا يكبّر  - يحوّل WebP (أو JPEG للمتصفحات القديمة)
-// - ينزّل الجودة تدريجياً (ما تحت minQuality) ثم يصغّر الأبعاد قليلاً فقط إذا لزم، لتحقيق الحجم المستهدف.
-
 const DEFAULTS = {
-  maxSide: 1200,       // أطول ضلع بالبكسل
-  minSide: 800,        // ما بنصغّر أقل من هيك لأجل الحجم
-  targetKB: 150,       // الحجم المستهدف للملف
+  maxSide: 1200,       
+  minSide: 800,        
+  targetKB: 150,      
   startQuality: 0.86,
   minQuality: 0.68,
   qualityStep: 0.04,
@@ -29,20 +25,19 @@ export async function optimizeImage(file, opts = {}) {
   const o = { ...DEFAULTS, ...opts };
   const bmp = await createImageBitmap(file, { imageOrientation: 'from-image' });
   const ow = bmp.width, oh = bmp.height;
-  let side = Math.min(o.maxSide, Math.max(ow, oh)); // لا نكبّر أبداً
+  let side = Math.min(o.maxSide, Math.max(ow, oh));
   const ratio = ow / oh;
   const dims = (s) => ratio >= 1
     ? [Math.round(s), Math.round(s / ratio)]
     : [Math.round(s * ratio), Math.round(s)];
 
-  // نحدد الصيغة: WebP إذا المتصفح قادر يكتبها وإلا JPEG
   let [w, h] = dims(side);
   let canvas = draw(bmp, w, h, false);
   let type = 'image/webp';
   let blob = await toBlob(canvas, type, o.startQuality);
   if (!blob || blob.type !== 'image/webp') {
     type = 'image/jpeg';
-    canvas = draw(bmp, w, h, true); // JPEG بدون شفافية → خلفية بيضاء
+    canvas = draw(bmp, w, h, true); 
     blob = await toBlob(canvas, type, o.startQuality);
   }
 
@@ -55,12 +50,11 @@ export async function optimizeImage(file, opts = {}) {
       side = Math.round(side * 0.92);
       [w, h] = dims(side);
       canvas = draw(bmp, w, h, type === 'image/jpeg');
-    } else break; // وصلنا لأدنى جودة وأدنى أبعاد: نقبل الحجم
+    } else break; 
     blob = await toBlob(canvas, type, q);
   }
   bmp.close?.();
 
-  // إذا الملف الأصلي أصغر وأبعاده ضمن الحد، ما في داعي نستبدله
   const smallEnough = Math.max(ow, oh) <= o.maxSide;
   if (smallEnough && file.size <= blob.size && /^image\/(webp|jpeg)$/.test(file.type)) {
     return { blob: file, width: ow, height: oh,

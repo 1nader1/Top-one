@@ -1,7 +1,6 @@
 import { SUPABASE_URL, SUPABASE_KEY, IMAGE_BUCKET } from '../assets/js/config.js';
 import { optimizeImage } from '../assets/js/image-tools.js';
 
-/* ---------- أدوات صغيرة ---------- */
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const esc = (s = '') => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -21,7 +20,6 @@ function toast(msg, type = '') {
   clearTimeout(toastTimer); toastTimer = setTimeout(() => t.className = '', 3200);
 }
 
-/* ---------- الجلسة والـ API ---------- */
 const SKEY = 'topone_admin_session';
 let session = (() => { try { return JSON.parse(localStorage.getItem(SKEY)); } catch { return null; } })();
 function saveSession(s) {
@@ -61,7 +59,6 @@ async function api(path, { method = 'GET', body, headers = {}, raw = false, retr
   return t ? JSON.parse(t) : null;
 }
 
-/* ---------- الحالة ---------- */
 let categories = [], products = [], ed = null;
 
 function show(view) {
@@ -79,7 +76,6 @@ async function loadData() {
   renderFilters(); renderProducts(); renderCategories();
 }
 
-/* ---------- الدخول ---------- */
 async function enter() {
   const rows = await api('/rest/v1/admins?select=user_id');
   if (!rows.length) { logout(); throw new Error('هذا الحساب غير مصرّح له بالإدارة'); }
@@ -98,14 +94,12 @@ $('#login-form').addEventListener('submit', async (e) => {
 });
 $('#logout').addEventListener('click', logout);
 
-/* ---------- تبويبات ---------- */
 $$('.tab').forEach(b => b.addEventListener('click', () => {
   $$('.tab').forEach(x => x.classList.toggle('active', x === b));
   $('#panel-products').hidden = b.dataset.tab !== 'products';
   $('#panel-categories').hidden = b.dataset.tab !== 'categories';
 }));
 
-/* ---------- قائمة المنتجات ---------- */
 function renderFilters() {
   const keep = $('#filter-cat').value;
   $('#filter-cat').innerHTML = '<option value="">كل التصنيفات</option>' +
@@ -115,17 +109,26 @@ function renderFilters() {
 }
 function renderProducts() {
   const q = $('#search').value.trim().toLowerCase(), cat = $('#filter-cat').value;
+  const free = !q && !cat;   
   const list = products.filter(p =>
     (!cat || (cat === '__none' ? !p.category_id : p.category_id === cat)) &&
     (!q || p.name.toLowerCase().includes(q) || String(p.id) === q));
   $('#count').textContent = `${list.length} من ${products.length}`;
+  $('#order-hint').textContent = free
+    ? 'لتغيير الترتيب: اسحب الكرت وأفلته بمكانه (على الكمبيوتر)، أو استخدم أزرار تقديم / تأخير / للأول. الترتيب بيتطبق مباشرة على الموقع.'
+    : 'السحب وأزرار تقديم/تأخير بتشتغل بدون بحث أو فلتر. زر "للأول" متاح دايماً.';
   $('#grid').innerHTML = list.map(p => {
+    const pos = products.indexOf(p);
     const first = p.colors?.[0]?.image ? imgSrc(p.colors[0].image) : '';
-    return `<article class="pcard ${p.active ? '' : 'hidden-p'}" data-id="${p.id}">
-      <div class="frame"><img class="bg" src="${esc(first)}" alt="" loading="lazy"><img class="fg" src="${esc(first)}" alt="${esc(p.name)}" loading="lazy"></div>
+    return `<article class="pcard ${p.active ? '' : 'hidden-p'}" data-id="${p.id}" ${free ? 'draggable="true"' : ''}>
+      <div class="frame"><span class="rank">${pos + 1}</span><img class="bg" src="${esc(first)}" alt="" loading="lazy" draggable="false"><img class="fg" src="${esc(first)}" alt="${esc(p.name)}" loading="lazy" draggable="false"></div>
       <div class="info"><h4>${esc(p.name)}${p.active ? '' : '<span class="badge">مخفي</span>'}</h4>
         <span class="muted small">#${p.id} · ${esc(catName(p.category_id))}</span>
         <div class="dots">${(p.colors || []).map(c => `<i style="background:${esc(c.hex)}"></i>`).join('')}</div></div>
+      <div class="moves">
+        ${free ? `<button class="btn sm" data-act="earlier" ${pos === 0 ? 'disabled' : ''}>→ تقديم</button>
+        <button class="btn sm" data-act="later" ${pos === products.length - 1 ? 'disabled' : ''}>تأخير ←</button>` : ''}
+        <button class="btn sm" data-act="first" ${pos === 0 ? 'disabled' : ''}>⇱ للأول</button></div>
       <div class="actions">
         <button class="btn sm" data-act="edit">تعديل</button>
         <button class="btn sm" data-act="toggle">${p.active ? 'إخفاء' : 'إظهار'}</button>
@@ -136,6 +139,56 @@ $('#search').addEventListener('input', renderProducts);
 $('#filter-cat').addEventListener('change', renderProducts);
 $('#new-product').addEventListener('click', () => openEditor(null));
 
+
+async function saveOrder(list, prev) {
+  const ids = list.map(p => p.id);
+  try {
+    await api('/rest/v1/rpc/reorder_products', { method: 'POST', body: { ids } });   // طلب واحد (يحتاج 4-reorder.sql)
+  } catch (e) {
+    if (!/could not find the function|PGRST202|404/i.test(e.message)) throw e;
+
+    console.warn('reorder_products غير موجودة، نستخدم التحديث المباشر');
+    const old = new Map(prev.map(p => [p.id, p.sort_order]));
+    const changed = list.filter(p => old.get(p.id) !== p.sort_order);
+    for (let i = 0; i < changed.length; i += 8) {
+      await Promise.all(changed.slice(i, i + 8).map(p =>
+        api(`/rest/v1/products?id=eq.${p.id}`, { method: 'PATCH', body: { sort_order: p.sort_order }, headers: { Prefer: 'return=minimal' } })));
+    }
+  }
+}
+async function moveTo(id, newIndex) {
+  const from = products.findIndex(p => p.id === id);
+  if (from < 0 || newIndex < 0 || newIndex >= products.length || from === newIndex) return;
+  const prev = products, list = [...products];
+  list.splice(newIndex, 0, list.splice(from, 1)[0]);
+  products = list.map((p, i) => ({ ...p, sort_order: i }));
+  renderProducts(); renderCategories();               
+  try { await saveOrder(products, prev); toast('تم حفظ الترتيب', 'ok'); }
+  catch (ex) { products = prev; renderProducts(); toast('تعذر حفظ الترتيب: ' + ex.message, 'err'); }
+}
+let dragId = null;
+$('#grid').addEventListener('dragstart', (e) => {
+  const card = e.target.closest?.('.pcard[draggable="true"]'); if (!card) return;
+  dragId = +card.dataset.id; card.classList.add('dragging');
+  e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', String(dragId));
+});
+$('#grid').addEventListener('dragover', (e) => {
+  if (dragId == null) return;
+  const card = e.target.closest('.pcard'); if (!card) return;
+  e.preventDefault();
+  $$('.drop-target').forEach(c => c.classList.remove('drop-target'));
+  if (+card.dataset.id !== dragId) card.classList.add('drop-target');
+});
+$('#grid').addEventListener('drop', (e) => {
+  if (dragId == null) return;
+  e.preventDefault();
+  const card = e.target.closest('.pcard'); const id = dragId; dragId = null;
+  if (card) moveTo(id, products.findIndex(p => p.id === +card.dataset.id));
+});
+$('#grid').addEventListener('dragend', () => {
+  dragId = null; $$('.dragging,.drop-target').forEach(c => c.classList.remove('dragging', 'drop-target'));
+});
+
 async function removeFromBucket(paths) {
   paths = paths.filter(Boolean);
   if (!paths.length) return;
@@ -145,6 +198,10 @@ async function removeFromBucket(paths) {
 $('#grid').addEventListener('click', async (e) => {
   const btn = e.target.closest('[data-act]'); if (!btn) return;
   const p = products.find(x => x.id === +btn.closest('.pcard').dataset.id); if (!p) return;
+  const pos = products.indexOf(p);
+  if (btn.dataset.act === 'earlier') return moveTo(p.id, pos - 1);
+  if (btn.dataset.act === 'later') return moveTo(p.id, pos + 1);
+  if (btn.dataset.act === 'first') return moveTo(p.id, 0);
   try {
     if (btn.dataset.act === 'edit') openEditor(p);
     if (btn.dataset.act === 'toggle') {
@@ -160,8 +217,7 @@ $('#grid').addEventListener('click', async (e) => {
   } catch (ex) { toast(ex.message, 'err'); }
 });
 
-/* ---------- محرر المنتج ---------- */
-async function guessColor(blob) {   // لون تقريبي من وسط الصورة كقيمة مبدئية
+async function guessColor(blob) { 
   try {
     const bmp = await createImageBitmap(blob);
     const c = document.createElement('canvas'); c.width = c.height = 16;
@@ -282,7 +338,6 @@ $('#product-form').addEventListener('submit', async (e) => {
   } finally { saveBtn.disabled = false; $('#save-status').textContent = ''; }
 });
 
-/* ---------- التصنيفات ---------- */
 function renderCategories() {
   const count = (id) => products.filter(p => p.category_id === id).length;
   $('#cat-list').innerHTML = categories.map(c => `<div class="cat-row" data-id="${esc(c.id)}">
@@ -318,7 +373,6 @@ $('#cat-add').addEventListener('submit', async (e) => {
   } catch (ex) { toast(ex.message, 'err'); }
 });
 
-/* ---------- تشغيل ---------- */
 (async () => {
   if (!session) return show('login');
   try { await enter(); } catch (ex) { show('login'); if (session === null) { $('#login-error').textContent = ex.message; $('#login-error').hidden = false; } }

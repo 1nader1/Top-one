@@ -35,7 +35,7 @@ function cardHTML(p) {
   </div>`;
 }
 
-// تبديل اللون (Event delegation: يشتغل على الكروت المرسومة ديناميكياً)
+
 const preloaded = new Map();
 const preload = (src) => {
   if (!preloaded.has(src)) {

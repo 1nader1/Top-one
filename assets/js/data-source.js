@@ -1,4 +1,3 @@
-// مصدر بيانات الموقع: Supabase أولاً، وإذا فشل أو تأخر نقرأ data/products.json (نسخة احتياطية).
 import { SUPABASE_URL, SUPABASE_KEY } from './config.js';
 
 const TIMEOUT_MS = 4000;

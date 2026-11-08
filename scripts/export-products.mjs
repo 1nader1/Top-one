@@ -1,5 +1,3 @@
-// يصدّر المنتجات من Supabase إلى data/products.json (النسخة الاحتياطية للموقع).
-// يشتغل بـ GitHub Actions. الطلب نفسه يحافظ على نشاط المشروع المجاني.
 import { readFile, writeFile } from 'node:fs/promises';
 
 const URL_ = process.env.SUPABASE_URL;

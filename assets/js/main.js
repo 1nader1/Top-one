@@ -1,9 +1,7 @@
-// قائمة الموبايل
 document.getElementById('menu-btn').addEventListener('click', () => {
   document.getElementById('mobile-menu').classList.toggle('hidden');
 });
 
-// سكرول ناعم للروابط الداخلية
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const target = document.querySelector(this.getAttribute('href'));
@@ -14,7 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// تحميل فيديو الهيرو عند ظهوره
 document.addEventListener('DOMContentLoaded', () => {
   const video = document.getElementById('hero-video');
   if (!video) return;

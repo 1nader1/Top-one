@@ -1,0 +1,1434 @@
+{
+  "categories": [
+    {
+      "id": "sport",
+      "name": "رياضي"
+    },
+    {
+      "id": "tshirt",
+      "name": "تيشيرتات"
+    },
+    {
+      "id": "jacket",
+      "name": "جاكيتات"
+    },
+    {
+      "id": "jeans",
+      "name": "جينز"
+    },
+    {
+      "id": "shirt",
+      "name": "قمصان"
+    }
+  ],
+  "products": [
+    {
+      "id": 99,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#024302",
+          "image": "products/p99 1.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p99 2.jpg"
+        },
+        {
+          "hex": "#6b4a08",
+          "image": "products/p99 3.jpg"
+        },
+        {
+          "hex": "#c6f5fe",
+          "image": "products/p99 4.jpg"
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#747a36",
+          "image": "products/p98 1.jpg"
+        },
+        {
+          "hex": "#e6eff0",
+          "image": "products/p98 2.jpg"
+        },
+        {
+          "hex": "#050505",
+          "image": "products/p98 3.jpg"
+        },
+        {
+          "hex": "#767676",
+          "image": "products/p98 4.jpg"
+        },
+        {
+          "hex": "#767676",
+          "image": "products/p98 5.jpg"
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#584108",
+          "image": "products/p97 1.jpg"
+        },
+        {
+          "hex": "#e0e7e8",
+          "image": "products/p97 2.jpg"
+        },
+        {
+          "hex": "#feffad",
+          "image": "products/p97 3.jpg"
+        },
+        {
+          "hex": "#feffad",
+          "image": "products/p97 4.jpg"
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#ecff8e",
+          "image": "products/p96 1.jpg"
+        },
+        {
+          "hex": "#f0ff8e",
+          "image": "products/p96 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "name": "تيشيت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#ffffff",
+          "image": "products/p95 1.jpg"
+        },
+        {
+          "hex": "#0d3f0d",
+          "image": "products/p95 2.jpg"
+        },
+        {
+          "hex": "#3549a6",
+          "image": "products/p95 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "name": "جينز",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#8eeeff",
+          "image": "products/p89 9.jpg"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "name": "جينز",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#0b0b0b",
+          "image": "products/p90 0.jpg"
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "name": "جينز",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#6b6b6b",
+          "image": "products/p92 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "name": "جينز",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#3c648e",
+          "image": "products/p93 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "name": "جينز",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#121558",
+          "image": "products/p94 4.jpg"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#42e3ff",
+          "image": "products/p88 1.jpg"
+        },
+        {
+          "hex": "#484848",
+          "image": "products/p88 2.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p88 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#c3008c",
+          "image": "products/p87.png"
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "name": "بوكسرات",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#0d086e",
+          "image": "products/p86 1.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p86 1.jpg"
+        },
+        {
+          "hex": "#3b3b3b",
+          "image": "products/p86 1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#8dacee",
+          "image": "products/p85 1.jpg"
+        },
+        {
+          "hex": "#121212",
+          "image": "products/p85 2.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p85 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#000000",
+          "image": "products/p84 1.jpg"
+        },
+        {
+          "hex": "#2c352d",
+          "image": "products/p84 2.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p84 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#223359",
+          "image": "products/p83 1.jpg"
+        },
+        {
+          "hex": "#ded4ba",
+          "image": "products/p83 2.jpg"
+        },
+        {
+          "hex": "#808080",
+          "image": "products/p83 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#234325",
+          "image": "products/p82 1.jpg"
+        },
+        {
+          "hex": "#d7d9c3",
+          "image": "products/p82 2.jpg"
+        },
+        {
+          "hex": "#cbb7af",
+          "image": "products/p82 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#25432a",
+          "image": "products/p81 1.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p81 2.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p81 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#515151",
+          "image": "products/p80 1.jpg"
+        },
+        {
+          "hex": "#79d165",
+          "image": "products/p80 2.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p80 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#465945",
+          "image": "products/p79 1.jpg"
+        },
+        {
+          "hex": "#fefefe",
+          "image": "products/p79 2.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p79 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#e1e6a7",
+          "image": "products/p78 1.jpg"
+        },
+        {
+          "hex": "#594b45",
+          "image": "products/p78 2.jpg"
+        },
+        {
+          "hex": "#465945",
+          "image": "products/p78 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "name": "تيشيرت",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#eb0707",
+          "image": "products/p77 1.jpg"
+        },
+        {
+          "hex": "#65cfd1",
+          "image": "products/p77 2.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p77 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "name": "قميص",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#fa9ae0",
+          "image": "products/p75 1.jpg"
+        },
+        {
+          "hex": "#79d165",
+          "image": "products/p75 2.jpg"
+        },
+        {
+          "hex": "#594b45",
+          "image": "products/p75 3.jpg"
+        },
+        {
+          "hex": "#eabc6c",
+          "image": "products/p75 4.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p75 5.jpg"
+        },
+        {
+          "hex": "#6bbec8",
+          "image": "products/p75 6.jpg"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "name": "كاب",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#764109",
+          "image": "products/p74 1.jpg"
+        },
+        {
+          "hex": "#e6a447",
+          "image": "products/p74 2.jpg"
+        },
+        {
+          "hex": "#4b4b4b",
+          "image": "products/p74 3.jpg"
+        },
+        {
+          "hex": "#947135",
+          "image": "products/p74 4.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p74 5.jpg"
+        },
+        {
+          "hex": "#7b7b7b",
+          "image": "products/p74 6.jpg"
+        },
+        {
+          "hex": "#085da9",
+          "image": "products/p74 7.jpg"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "name": "شنطة برميل",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#ffd000",
+          "image": "products/p70 1.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p70 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "name": "شنطة رياضية",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#ffffff",
+          "image": "products/p71 1.jpg"
+        },
+        {
+          "hex": "#e10000",
+          "image": "products/p71 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "name": "شنطة رياضية",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#000000",
+          "image": "products/p72 1.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p72 2.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p72 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "name": "شنطة رياضية",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#0049dc",
+          "image": "products/p73 1.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p73 2.jpg"
+        },
+        {
+          "hex": "#2bff18",
+          "image": "products/p73 3.jpg"
+        },
+        {
+          "hex": "#001fe8",
+          "image": "products/p73 4.jpg"
+        },
+        {
+          "hex": "#929292",
+          "image": "products/p73 5.jpg"
+        },
+        {
+          "hex": "#000bd7",
+          "image": "products/p73 6.jpg"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "name": "شراب مرسوم",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#ff8c00",
+          "image": "products/p76 1.jpg"
+        },
+        {
+          "hex": "#cb0707",
+          "image": "products/p76 2.jpg"
+        },
+        {
+          "hex": "#ebd508",
+          "image": "products/p76 3.jpg"
+        },
+        {
+          "hex": "#69e4e4",
+          "image": "products/p76 4.jpg"
+        },
+        {
+          "hex": "#3dc118",
+          "image": "products/p76 5.jpg"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "name": "فنايل رياضية",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#ffffff",
+          "image": "products/p60.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p60.jpg"
+        },
+        {
+          "hex": "#5a5a5a",
+          "image": "products/p60.jpg"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "name": "بوكسرات",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#297dc6",
+          "image": "products/p61.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p61.jpg"
+        },
+        {
+          "hex": "#3b3b3b",
+          "image": "products/p61.jpg"
+        },
+        {
+          "hex": "#adadad",
+          "image": "products/p61.jpg"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "name": "شراب HANES",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#ffffff",
+          "image": "products/p62 1.jpg"
+        },
+        {
+          "hex": "#050505",
+          "image": "products/p62 2.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p62 3.jpg"
+        },
+        {
+          "hex": "#838383",
+          "image": "products/p62 4.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p62 5.jpg"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "شنطة أديداس",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#d8cfac",
+          "image": "products/b1.jpg"
+        },
+        {
+          "hex": "#9c9c9c",
+          "image": "products/b2.jpg"
+        },
+        {
+          "hex": "#000485",
+          "image": "products/b4.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/b3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "شنطة نايك",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#cfcec9",
+          "image": "products/bn1.jpg"
+        },
+        {
+          "hex": "#3437cc",
+          "image": "products/bn3.jpg"
+        },
+        {
+          "hex": "#606060",
+          "image": "products/bn4.jpg"
+        },
+        {
+          "hex": "#020202",
+          "image": "products/bn2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "شنطة بوما",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#d50000",
+          "image": "products/bp2.jpg"
+        },
+        {
+          "hex": "#3437cc",
+          "image": "products/bp1.jpg"
+        },
+        {
+          "hex": "#757575",
+          "image": "products/bp4.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/bp3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#7026a1",
+          "image": "products/p31 2.jpg"
+        },
+        {
+          "hex": "#d8cfac",
+          "image": "products/p31 3.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p31 1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#ffffff",
+          "image": "products/p 32 1.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p 32 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#89834d",
+          "image": "products/p 33 1.jpg"
+        },
+        {
+          "hex": "#d90f52",
+          "image": "products/p 33 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#d2cbaa",
+          "image": "products/p 34 1.jpg"
+        },
+        {
+          "hex": "#969696",
+          "image": "products/p 34 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#53401b",
+          "image": "products/p35 2.jpg"
+        },
+        {
+          "hex": "#373737",
+          "image": "products/p35 1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#858585",
+          "image": "products/p36 1.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p36 2.jpg"
+        },
+        {
+          "hex": "#afa76a",
+          "image": "products/p36 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#000000",
+          "image": "products/p37 1.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p37 2.jpg"
+        },
+        {
+          "hex": "#4a6a3a",
+          "image": "products/p37 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#b4d469",
+          "image": "products/p38 1.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p38 2.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p38 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#000000",
+          "image": "products/p39 1.jpg"
+        },
+        {
+          "hex": "#af8e3b",
+          "image": "products/p39 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#caa854",
+          "image": "products/40 1.jpg"
+        },
+        {
+          "hex": "#4b4b4b",
+          "image": "products/40 2.jpg"
+        },
+        {
+          "hex": "#cfcfcf",
+          "image": "products/40 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#837c5a",
+          "image": "products/41 1.jpg"
+        },
+        {
+          "hex": "#919191",
+          "image": "products/41 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "جاكيت جينز فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#1a53c6",
+          "image": "products/42 1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#000000",
+          "image": "products/43 1.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/43 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#00174a",
+          "image": "products/p44 1.jpg"
+        },
+        {
+          "hex": "#2c6cff",
+          "image": "products/p44 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#ffffff",
+          "image": "products/p45 1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "جاكيت فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#18154c",
+          "image": "products/p46 1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "جينز ليفايس كحلي",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#18154c",
+          "image": "products/j1.jpg"
+        },
+        {
+          "hex": "#2c6cff",
+          "image": "products/j2.jpg"
+        },
+        {
+          "hex": "#000762",
+          "image": "products/j3.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/j4.jpg"
+        },
+        {
+          "hex": "#60aff5",
+          "image": "products/j5.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "حزام جلد طبيعي",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#5a3131",
+          "image": "products/L1 2.jpg"
+        },
+        {
+          "hex": "#5a3131",
+          "image": "products/L1.jpg"
+        },
+        {
+          "hex": "#5a3131",
+          "image": "products/L1 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "حذاء رسمي فاخر",
+      "category": "tshirt",
+      "description": "جودة عالية واعتمادية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#4b3333",
+          "image": "products/p11.jpg"
+        },
+        {
+          "hex": "#a67837",
+          "image": "products/p12.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p13.jpg"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "حذاء رياضي Nike",
+      "category": "shirt",
+      "description": "راحة وجودة عالية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#6f78a1",
+          "image": "products/p30 1.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p30 2.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p30 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "حذاء رياضي ASICS",
+      "category": "shirt",
+      "description": "راحة وجودة عالية",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#fff",
+          "image": "products/p21.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p22.jpg"
+        },
+        {
+          "hex": "#6f78a1",
+          "image": "products/p23.jpg"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "حذاء رياضي Adidas",
+      "category": "jeans",
+      "description": "جودة عالية وتصميم مميز",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#000000",
+          "image": "products/p32.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p31.jpg"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "حذاء رياضي Adidas",
+      "category": "jeans",
+      "description": "جودة عالية وتصميم مميز",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#000000",
+          "image": "products/p34.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p33.jpg"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "حذاء رياضي Adidas",
+      "category": "jeans",
+      "description": "جودة عالية وتصميم مميز",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#000000",
+          "image": "products/p36.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p35.jpg"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "صندل Water Fish",
+      "category": "jacket",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#3a597d",
+          "image": "products/L8 1.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/L8 2.jpg"
+        },
+        {
+          "hex": "#909090",
+          "image": "products/L8 3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "سلبر",
+      "category": "jacket",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#fcfcfc",
+          "image": "products/L7 1.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/L7 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "سلبر GYM",
+      "category": "jacket",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#7a7a7a",
+          "image": "products/L9.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/L9 3.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/L9 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "كاب",
+      "category": "jacket",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#ffffff",
+          "image": "products/p4.jpg"
+        },
+        {
+          "hex": "#009605",
+          "image": "products/p5.jpg"
+        },
+        {
+          "hex": "#e7d800",
+          "image": "products/p6.jpg"
+        },
+        {
+          "hex": "#ff9500",
+          "image": "products/p8.jpg"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "شراب رياضي Adidas",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#5a5a5a",
+          "image": "products/p10 0.jpg"
+        },
+        {
+          "hex": "#e68a00",
+          "image": "products/p10 01.jpg"
+        },
+        {
+          "hex": "#56ff27",
+          "image": "products/p10 02.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p10 1.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p10 5.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p10 7.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p10 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "شراب رياضي New Balance",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#000000",
+          "image": "products/p14 2.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p14 3.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p14 4.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p14 1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "شراب رياضي Puma",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#1d0091",
+          "image": "products/p15 0.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p15 1.jpg"
+        },
+        {
+          "hex": "#000000",
+          "image": "products/p15 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "شراب رياضي Jordan",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#ffffff",
+          "image": "products/p16.jpg"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "شراب رياضي Nike",
+      "category": "sport",
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#f78d02",
+          "image": "products/p17 1.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p17.jpg"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "products/p17 2.jpg"
+        }
+      ]
+    }
+  ]
+}

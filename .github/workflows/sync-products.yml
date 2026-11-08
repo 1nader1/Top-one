@@ -1,0 +1,32 @@
+name: Sync products backup
+
+on:
+  schedule:
+    - cron: '17 3 */2 * *'   # كل يومين تقريباً (طلب لـ Supabase = يضل المشروع نشيط)
+  workflow_dispatch:         # تشغيل يدوي من تبويب Actions
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Export products from Supabase
+        env:
+          SUPABASE_URL: https://gqhkmxulkjbdofmxssfh.supabase.co
+          SUPABASE_KEY: sb_publishable_W3jX_UspyLvlg6s3u_E_iA_Dst7u1iu
+        run: node scripts/export-products.mjs
+      - name: Commit if changed
+        run: |
+          if [ -n "$(git status --porcelain data/products.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/products.json
+            git commit -m "chore: sync products backup from Supabase"
+            git push
+          fi

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>لوحة التحكم — TopOne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<section id="login-view" class="center" hidden>
+  <form id="login-form" class="card login">
+    <h1><span class="gold">TOP</span> ONE</h1>
+    <p class="muted">لوحة التحكم بالمنتجات</p>
+    <label>الإيميل <input type="email" id="email" required autocomplete="username"></label>
+    <label>كلمة المرور <input type="password" id="password" required autocomplete="current-password"></label>
+    <p id="login-error" class="error" hidden></p>
+    <button class="btn primary" id="login-btn">تسجيل الدخول</button>
+  </form>
+</section>
+
+<div id="app-view" hidden>
+  <header class="topbar">
+    <strong><span class="gold">TOP</span> ONE — لوحة التحكم</strong>
+    <nav>
+      <a href="../" target="_blank" rel="noopener">عرض الموقع</a>
+      <button class="link" id="logout">خروج</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="tabs">
+      <button class="tab active" data-tab="products">المنتجات</button>
+      <button class="tab" data-tab="categories">التصنيفات</button>
+    </div>
+
+    <section id="panel-products">
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="بحث بالاسم أو الرقم">
+        <select id="filter-cat"></select>
+        <span id="count" class="muted"></span>
+        <button class="btn primary" id="new-product">+ منتج جديد</button>
+      </div>
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <section id="panel-categories" hidden>
+      <div id="cat-list" class="card"></div>
+      <form id="cat-add" class="card row">
+        <input id="cat-new" placeholder="اسم تصنيف جديد" required maxlength="60">
+        <button class="btn primary">إضافة</button>
+      </form>
+    </section>
+  </main>
+</div>
+
+<dialog id="editor">
+  <form id="product-form">
+    <header class="dlg-head">
+      <h2 id="editor-title"></h2>
+      <button type="button" class="icon-btn" id="editor-close" aria-label="إغلاق">✕</button>
+    </header>
+    <div class="dlg-body">
+      <label>اسم المنتج <input id="f-name" required maxlength="120"></label>
+      <label>الوصف <textarea id="f-desc" rows="2" maxlength="300"></textarea></label>
+      <div class="row">
+        <label class="grow">التصنيف <select id="f-cat"></select></label>
+        <label class="check"><input type="checkbox" id="f-active"> ظاهر في الموقع</label>
+      </div>
+
+      <h3>الألوان والصور</h3>
+      <p class="muted small">أول لون هو الصورة الرئيسية للكرت. الصور بتنضغط وبتتجهز تلقائياً قبل الرفع.</p>
+      <div id="colors"></div>
+      <label class="btn" for="add-files">+ إضافة صور</label>
+      <input type="file" id="add-files" accept="image/*" multiple hidden>
+      <input type="file" id="replace-file" accept="image/*" hidden>
+    </div>
+    <footer class="dlg-foot">
+      <span id="save-status" class="muted"></span>
+      <button type="button" class="btn" id="cancel">إلغاء</button>
+      <button class="btn primary" id="save">حفظ</button>
+    </footer>
+  </form>
+</dialog>
+
+<div id="toast" role="status"></div>
+<script type="module" src="admin.js"></script>
+</body>
+</html>

@@ -283,3 +283,31 @@ body {
     .map-container { padding-bottom: 66%; }
     .open-maps-btn { padding: 0.5rem 0.7rem; font-size: 0.95rem; }
 }
+
+/* ===== إطار صورة المنتج: الصورة كاملة بالنص + نسخة مكبّرة ومموّهة منها كخلفية ===== */
+.img-frame {
+    position: relative;
+    height: 16rem;
+    overflow: hidden;
+    isolation: isolate;
+    background: #0f1f55;
+}
+.img-frame .img-blur {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(22px) brightness(0.9);
+    transform: scale(1.3);          /* يخفي حواف البلور */
+    z-index: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.img-frame .product-main-image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

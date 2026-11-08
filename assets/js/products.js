@@ -21,7 +21,7 @@ function cardHTML(p) {
     <div class="p-4">
       <h3 class="font-bold text-lg text-white mb-2">${esc(p.name)}</h3>
       <p class="text-gray-300 mb-3">${esc(p.description)}</p>
-      ${colors.length > 1 ? `
+      ${colors.length > 0 ? `
       <div class="mb-3">
         <span class="font-medium text-white">الألوان المتاحة:</span>
         <div class="color-options mt-2">

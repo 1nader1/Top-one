@@ -23,6 +23,114 @@
   ],
   "products": [
     {
+      "id": 108,
+      "name": "سكارف",
+      "category": null,
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#e1b975",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87mccz-tdztn8.webp"
+        },
+        {
+          "hex": "#504b49",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87mdnq-5xwc6m.webp"
+        },
+        {
+          "hex": "#000000",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87me01-k910y9.webp"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87mecg-18gvko.webp"
+        },
+        {
+          "hex": "#15158e",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87men3-1wnamx.webp"
+        },
+        {
+          "hex": "#525252",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87mey3-di1m73.webp"
+        },
+        {
+          "hex": "#739e47",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87mf9t-ls9uea.webp"
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "name": "محافظ",
+      "category": null,
+      "description": "محافظ جلدية فاخرة",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#000000",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw879by7-uvetz7.webp"
+        },
+        {
+          "hex": "#f57600",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw879cx7-h5614b.webp"
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "name": "شنط صغيرة",
+      "category": null,
+      "description": "",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#d3c897",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87iaip-hptgq0.webp"
+        },
+        {
+          "hex": "#000000",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87ibk4-bhr17c.webp"
+        },
+        {
+          "hex": "#4e3a0e",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87ibvx-sh5siq.webp"
+        },
+        {
+          "hex": "#255fcb",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87icbo-j8m14x.webp"
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "name": "شرابات",
+      "category": null,
+      "description": "شرابات بموديلات وماركات مختلفة",
+      "active": true,
+      "colors": [
+        {
+          "hex": "#ffffff",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87erxv-gbh2fs.webp"
+        },
+        {
+          "hex": "#000000",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87esya-adozc1.webp"
+        },
+        {
+          "hex": "#666666",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87etbf-e36frz.webp"
+        },
+        {
+          "hex": "#363636",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87etnn-dj0b47.webp"
+        },
+        {
+          "hex": "#ffffff",
+          "image": "https://gqhkmxulkjbdofmxssfh.supabase.co/storage/v1/object/public/product-images/mw87etyx-vw2if4.webp"
+        }
+      ]
+    },
+    {
       "id": 99,
       "name": "تيشيرت",
       "category": "sport",
